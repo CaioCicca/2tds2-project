@@ -1,4 +1,5 @@
 const posts = [];
+let postIndex = -1
 
 function savePost() {
     const title = document.getElementById("title").value;
@@ -7,12 +8,25 @@ function savePost() {
     const publisher = document.getElementById("publisher").value;
     const date = document.getElementById("date").value;
 
-    if(title && category && resume && publisher && date){
-        storePosts(title, category, resume, publisher, date);
+    if (title && category && resume && publisher && date) {
+        if (postIndex == -1) {
+            storePosts(title, category, resume, publisher, date);
+            cleanFields();
+            showPosts();
+        } else {
+            posts[postIndex] = {
+                title,
+                category,
+                resume,
+                publisher,
+                date,
+            };
+        }
         cleanFields();
         showPosts();
-    } else{
-        alert("Preencha todos os campos! ")
+        postIndex = -1;
+    } else {
+        alert("Preencha todos os campos! ");
     }
 }
 
@@ -24,7 +38,7 @@ function cleanFields() {
     document.getElementById("date").value = "";
 }
 
-function storePosts(title, category, resume, publisher, date){
+function storePosts(title, category, resume, publisher, date) {
     const post = {
         title: title,
         category: category,
@@ -32,12 +46,11 @@ function storePosts(title, category, resume, publisher, date){
         publisher: publisher,
         date: date
     };
-    posts.push(post)
-    console.log(posts)
+    posts.push(post);
 }
 
-function showPosts(){
-    console.log("entrou aqui")
+function showPosts() {
+    document.getElementById("list").classList.remove("hidden");
     let showContent = "";
 
     posts.forEach((post, index) => {
@@ -55,4 +68,25 @@ function showPosts(){
     });
 
     document.getElementById("list").innerHTML = showContent;
+}
+
+function deletePost(index) {
+    posts.splice(index, 1);
+    showPosts();
+
+    if(posts.length == 0){
+        document.getElementById("list").classList.add("hidden")
+    }
+}
+
+function editPost(index) {
+    const post = posts[index];
+
+    document.getElementById("title").value = post.title;
+    document.getElementById("category").value = post.category;
+    document.getElementById("resume").value = post.resume;
+    document.getElementById("publisher").value = post.publisher;
+    document.getElementById("date").value = post.date;
+
+    postIndex = index;
 }

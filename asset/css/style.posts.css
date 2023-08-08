@@ -1,37 +1,44 @@
-*{
+* {
     box-sizing: 0;
     margin: 0;
     padding: 0;
 }
 
-body{
-    background-color: #f0f0f0;
+body {
+    background-image: url(../images/2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h1{
-    color: #d30000;
+h1 {
+    background: #FF7F47;
+    background: radial-gradient(circle farthest-corner at center center, #FF7F47 0%, #FF0074 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-#postForm{
+#postForm {
     max-width: 500px;
     width: 100%;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #ff0072;
     border-radius: 8px;
-    background-color: #fff;
+    background: rgb(255, 127, 71);
+    background: linear-gradient(0deg, rgba(255, 127, 71, 1) 0%, rgba(255, 0, 114, 1) 100%);
 }
 
 label,
 input,
-textarea{
+textarea {
     display: block;
     margin-bottom: 10px;
     width: 100%;
@@ -39,20 +46,73 @@ textarea{
     max-width: 500px;
 }
 
-textarea{
+textarea {
     resize: none;
 }
 
-button{
-    background-color: #d30000;
-    color: #fff;
+button {
+    background-color: #fff;
+    color: black;
     cursor: pointer;
     border-radius: 8px;
     width: 100%;
 }
 
-button:hover{
-    background-color: #a00000;
+button:hover {
+    background-color: #ccc;
     transition: 0.3s;
 }
 
+.itemPost {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.itemPost h2 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.itemPost button {
+    background-color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+#list {
+    max-width: 500px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ff0072;
+    border-radius: 8px;
+    background: rgb(255, 127, 71);
+    background: linear-gradient(0deg, rgba(255, 127, 71, 1) 0%, rgba(255, 0, 114, 1) 100%);
+}
+
+.itemPost button:hover {
+    background-color: #ccc;
+    transition: 0.3s;
+}
+
+.hidden {
+    display: none;
+}
+
+#box{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    background-color: #ccc;
+    border: 1px solid black;
+    width: 10%;
+    border-radius: 5px;
+}
