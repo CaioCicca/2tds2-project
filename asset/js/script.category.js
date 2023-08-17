@@ -3,7 +3,7 @@ class Category {
     constructor(id, name){
         this.id = id;
         this.name = name;
-        this.products =[];
+        this.products = [];
     }
 }
 
@@ -14,4 +14,18 @@ class Product {
         this.price = price;
         this.category = category;
     }
+}
+
+class CategoryService {
+    constructor(){
+        this.categorys = [];
+        this.nextCategoryId = 0;
+    }
+
+    addCategory(name){
+        const id = this.nextCategoryId++;
+        const category = new Category(id, name);
+        this.categories.push(category);
+    }
+
 }
