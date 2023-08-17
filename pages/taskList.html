@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../asset/css/style.taskList.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../asset/js/script.taskList.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div id="div_main">
+            <p id="warning" class="hidden">Favor adicionar um título para a tarefa</p>
+            <div id="line">
+                <div id="div_input">
+                    <input type="text" id="text" placeholder="Adicione uma nova tarefa" required>
+                </div>
+                <div id="div_button">
+                    <button onclick="createTask()" id="button1" type="button">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="publish" class="hidden"></div>
+        </div>
+    </main>
+</body>
+
+</html>

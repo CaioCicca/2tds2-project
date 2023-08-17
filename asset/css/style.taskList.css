@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #f5f5f5;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#div_main {
+    text-align: center;
+    align-items: center;
+    margin-top: 15vh;
+    background-color: #FFF;
+    padding: 15px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+}
+
+#warning {
+    color: red;
+    background-color: #FFF;
+    text-align: start;
+    padding-bottom: 5px;
+}
+
+#line {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: #FFF;
+}
+
+#div_input {
+    text-align: start;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    width: 34rem;
+}
+
+#div_button {
+    margin-left: 10px;
+}
+
+#text {
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+#button1 {
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+#button1:hover {
+    background-color: #f0f0f0;
+    transition: 0.3s;
+}
+
+#tasks{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f5f5f5;
+}
+
+#text_task{
+    width: 75%;
+    text-align: start;
+}
+
+#buttons{
+    width: 25%;
+    text-align: end;
+}
+
+.check {
+    border: 0.5px solid grey;
+    border-radius: 12px;
+    padding: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    outline: none;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.check:hover{
+    background-color: #f0f0f0;
+    transition: 0.3s;
+}
+
+.edit {
+    background-color: #007bff;
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    cursor: pointer;
+    outline: none;
+}
+
+.edit:hover{
+    background-color: #0069d9;
+    transition: 0.3s;
+}
+
+.trash {
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    cursor: pointer;
+    outline: none;
+    background-color: #ff0000;
+}
+
+.trash:hover{
+    background-color: #bd1515;
+    transition: 0.3s;
+}
+
+.hidden {
+    display: none;
+}
+
+.risco{
+    text-decoration: line-through;
+}
