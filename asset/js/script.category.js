@@ -19,11 +19,11 @@ class Product {
 class CategoryService {
     constructor(){
         this.categories = [];
-        this.nextCategoryId = 0;
+        this.nextCategoryId = 1;
     }
 
     addCategory(name){
-        const id = this.nextCategoryId++;
+        const id = this.nextCategoryId ++;
         const category = new Category(id, name);
         this.categories.push(category);
     }
@@ -32,7 +32,7 @@ class CategoryService {
 class ProductService{
     constructor(){
         this.products = [];
-        this.nextProductId = 0;
+        this.nextProductId = 1;
     }
 
     addProduct(name, price, category){
@@ -44,10 +44,22 @@ class ProductService{
 }
 
 const categoryList = new CategoryService()
+const productList = new ProductService()
 
 function createCategory(){
     const categoryName = "Doce";
 
-    categoryList.addCategory(categoryName)
-    console.log(categoryList.categories)
+    categoryList.addCategory(categoryName);
+
+    console.log(categoryList.categories);
+}
+
+function createProduct(){
+    const productName = "Bolo";
+    const productPrice = 20;
+    const productCategory = categoryList.categories[0];
+
+    productList.addProduct(productName, productPrice, productCategory);
+
+    console.log(productList.products);
 }
