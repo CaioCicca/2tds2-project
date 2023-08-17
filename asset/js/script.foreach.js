@@ -75,6 +75,10 @@ function addCarList(){
 
     console.log(listaDeCarros);
 
+    listaDeCarros.cars.forEach((car) => {
+        console.log(`Marca: ${car.marca} - Modelo: ${car.modelo}`)
+    })
+
     clearCar();
 }
 
