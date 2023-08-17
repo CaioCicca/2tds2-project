@@ -48,10 +48,12 @@ const productList = new ProductService()
 
 function createCategory(){
     const categoryName = document.getElementById("categoryName").value;
-
+    console.log(categoryName)
     categoryList.addCategory(categoryName);
 
     console.log(categoryList.categories);
+
+    clearFormFields()
 }
 
 function createProduct(){
@@ -64,5 +66,14 @@ function createProduct(){
     } else {
     productList.addProduct(productName, productPrice, productCategory);
     console.log(productList.products);
+    
+    clearFormFields()
     }
+}
+
+function clearFormFields(){
+    document.getElementById("categoryName").value = '';
+    document.getElementById("productName").value = '';
+    document.getElementById("productPrice").value = '';
+    document.getElementById("productCategory").value = '';
 }
