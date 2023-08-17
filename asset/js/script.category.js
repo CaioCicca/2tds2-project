@@ -47,7 +47,7 @@ const categoryList = new CategoryService()
 const productList = new ProductService()
 
 function createCategory(){
-    const categoryName = "Doce";
+    const categoryName = document.getElementById("categoryName").value;
 
     categoryList.addCategory(categoryName);
 
@@ -55,11 +55,14 @@ function createCategory(){
 }
 
 function createProduct(){
-    const productName = "Bolo";
-    const productPrice = 20;
+    const productName = document.getElementById("productName").value;
+    const productPrice = document.getElementById("productPrice").value;
     const productCategory = categoryList.categories[0];
-
+    if(productPrice < 0) {
+        alert("digite um preço válido!");
+        document.getElementById("productPrice").value = '';
+    } else {
     productList.addProduct(productName, productPrice, productCategory);
-
     console.log(productList.products);
+    }
 }
