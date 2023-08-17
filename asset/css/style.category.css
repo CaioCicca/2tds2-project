@@ -67,7 +67,8 @@ h2{
 }
 
 .btn:hover {
-    background-color: #fff;
-    color: #fd1b1b;
-    border: 1px solid #fd1b1b;
+    background-color: #e60e0e;
+    color: #fff;
+    transform: scale(1.02);
+    
 }
