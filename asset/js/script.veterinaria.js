@@ -5,7 +5,7 @@ class Pet {
         this.especie = especie;
         this.foto = foto;
         this.aniversario = aniversario;
-        this.idade = getAge();
+        this.idade = this.getAge();
     }
 
     getAge() {
@@ -28,11 +28,11 @@ class PetsEngaiolados {
 
     add(pet) {
         if (campos()) {
-            msg('Preencha todos os campos!', 'erro')
-        } else if (!verificarFoto()) {
-            msg('Coloque uma imagem válida!', 'erro')
+            erroMsg('Preencha todos os campos!')
+        } else if (!verificarFoto(pet.foto)) {
+            erroMsg('Coloque uma imagem válida!')
         } else {
-            msg('Cadastrado com sucesso!', 'sucesso')
+            msg('Cadastrado com sucesso!')
             this.pets.push(pet);
             limpa();
         }
@@ -41,7 +41,7 @@ class PetsEngaiolados {
 
 const listaPet = new PetsEngaiolados()
 
-function createPet() {
+function criarPet() {
     let tutor = document.getElementById('tutor').value;
     let nome = document.getElementById('nome').value;
     let especie = document.getElementById('especie').value;
@@ -50,7 +50,8 @@ function createPet() {
 
     const pet = new Pet(tutor, nome, especie, foto, aniversario);
 
-    listaPet.push(pet);
+    listaPet.add(pet);
+    console.log(listaPet)
 }
 
 function limpa() {
@@ -61,11 +62,19 @@ function limpa() {
     document.getElementById('aniversario').value = '';
 }
 
-function msg(msg, type) {
+function msg(msg) {
     document.getElementById("msg").innerHTML = msg;
     document.getElementById("msg").classList.remove("hidden");
     setTimeout(function () {
         document.getElementById("msg").classList.add("hidden");
+    }, 4000);
+}
+
+function erroMsg(msg) {
+    document.getElementById("msgErro").innerHTML = msg;
+    document.getElementById("msgErro").classList.remove("hidden");
+    setTimeout(function () {
+        document.getElementById("msgErro").classList.add("hidden");
     }, 4000);
 }
 
@@ -83,19 +92,37 @@ function campos() {
     }
 }
 
-function verificarFoto() {
-
+function verificarFoto(url) {
+    if(url.match(/\.(jpeg|jpg|gif|png)$/) != null){
+        return true;
+    } else {
+        return false;
+    }
 }
 
 function mostrar() {
-    msg = ''
+    document.getElementById("main").classList.add("hidden");
+    document.getElementById("cadastro").classList.remove("hidden");
+
+    let msg = ''
     listaPet.pets.forEach(pet => {
-        msg = `
-        <div>
-            <p><strong>${nome}</strong><p>
-            <img src="" alt="foto ${nome}">
-            <p><strong>${nome}</strong><p>
+        msg += `
+        <div id="animal">
+            <p><strong>${pet.nome}</strong></p>
+            <img src="${pet.foto}" alt="foto ${pet.nome}">
+            <div id="start">
+            <p><strong>${pet.tutor}</strong></p>
+            <p><strong>${pet.especie}</strong></p>
+            <p><strong>${pet.aniversario}</strong></p>
+            <p><strong>${pet.getAge()}</strong></p>
+            </div>
         </div>
         `
     });
+    document.getElementById('cadastro').innerHTML = msg
 }
+
+function voltar() {
+    document.getElementById("main").classList.remove("hidden");
+    document.getElementById("cadastro").classList.add("hidden");
+} 
