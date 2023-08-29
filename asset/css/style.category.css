@@ -109,3 +109,40 @@ h2{
     border-radius: 3px;
 }
 
+.categoriesList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.editButton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.45rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, trasnform 0.3s ease;
+}
+
+.editButton:hover {
+    background-color: #0069d9;
+    color: #fff;
+    transform: scale(1.02);
+}
+
+.deleteButton{
+    background-color: #fd1b1b;
+    color: #fff;
+    padding: 0.45rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, trasnform 0.3s ease;
+}
+
+.deleteButton:hover {
+    background-color:  #e60e0e;
+    color: #fff;
+    transform: scale(1.02);
+}
