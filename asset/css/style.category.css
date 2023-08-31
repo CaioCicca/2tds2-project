@@ -146,3 +146,25 @@ h2{
     color: #fff;
     transform: scale(1.02);
 }
+
+li{
+    margin: 0.5rem;
+}
+
+#option_base {
+    color: #ccc;
+}
+
+.hidden {
+    display: none;
+}
+
+#editbutton {
+   background-color: #007bff;
+}
+
+#editbutton:hover {
+    background-color: #0069d9;
+    color: #fff;
+    transform: scale(1.02);
+}
