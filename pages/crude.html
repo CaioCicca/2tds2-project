@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../asset/css/style.crude.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Cadastro de equipes</h2>
+    <div>
+        <label for="nome">Nome da equipe</label>
+        <input type="text" name="nome" id="nomeDaEquipe">
+        <label for="quantidade">Quantidade de Jogadores</label>
+        <input type="number" name="quantidade" id="quantidade">
+    </div>
+
+    <button id="botaoCadastrar" onclick="criarEquipe()">Cadastrar</button>
+    <button id="botaoEditar" class="hidden" onclick="editarEquipe()">Editar</button>
+
+    <div id="listarEquipes"></div>
+
+    <div id="listarEquipeUnica"></div>
+
+    <script src="../asset/js/script.crude.js"></script>
+</body>
+
+</html>

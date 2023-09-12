@@ -1,0 +1,74 @@
+<mxfile host="65bd71144e">
+    <diagram id="5U4JClo_8HcSqoTwnAXg" name="Página-1">
+        <mxGraphModel dx="629" dy="474" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="309" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="40" width="220" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="310" style="edgeStyle=none;rounded=0;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=default;strokeWidth=1;endArrow=none;endFill=0;endSize=17;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" edge="1" parent="1" source="309">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="320" y="80" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="311" value="Pets Engaiolados" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="40" width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="312" value="&amp;nbsp;- pets: String [ ]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="80" width="220" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="313" value="&amp;nbsp;+ addPet(pet: String): void" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="100" width="220" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="318" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="40" y="40" width="161" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="289" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="318">
+                    <mxGeometry width="160" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="292" style="edgeStyle=none;rounded=0;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;strokeColor=default;strokeWidth=1;endArrow=none;endFill=0;endSize=17;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" edge="1" parent="318" source="289">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="40" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="293" value="Pet" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="318">
+                    <mxGeometry width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="294" value="&amp;nbsp;- tutor: String" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="318">
+                    <mxGeometry y="40" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="295" value="&amp;nbsp;- nome: String" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="318">
+                    <mxGeometry y="60" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="296" value="&amp;nbsp;- especie: String" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="318">
+                    <mxGeometry y="80" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="297" value="&amp;nbsp;- foto: String" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="318">
+                    <mxGeometry y="100" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="298" value="&amp;nbsp;- aniversario: Date" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="318">
+                    <mxGeometry x="1" y="120" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="299" value="&amp;nbsp;- idade: int" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="318">
+                    <mxGeometry y="140" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="300" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="318">
+                    <mxGeometry y="160" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="301" value="&amp;nbsp;+ getAge(): idade" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="318">
+                    <mxGeometry x="1" y="160" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="321" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=default;strokeWidth=1;endArrow=none;endFill=0;endSize=17;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="313" target="313">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="260" y="130" as="sourcePoint"/>
+                        <mxPoint x="340" y="130" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="420" y="100"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
